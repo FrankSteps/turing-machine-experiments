@@ -1,0 +1,11 @@
+input: '010010111'
+blank: ' '
+start state: scan
+
+table:
+  scan:
+    1:   {write: 0, R}
+    0:   R
+    ' ': {L: done}
+  
+  done:

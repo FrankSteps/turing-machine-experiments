@@ -1,0 +1,10 @@
+input: '0'
+blank: ' '
+start state: not
+
+table:
+  not:
+    0:   {write: 1, R} 
+    1:   {write: 0, R}
+    ' ': {L: done}
+  done:

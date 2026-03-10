@@ -1,0 +1,18 @@
+# 0 = reject
+# 1 = accept 
+
+input: '1#0'
+blank: ' '
+start state: or
+synonymys:
+  accept: {R: accept}
+  reject: {R: reject}
+
+table:
+  or:
+    1  : {R: accept}
+    0  : {R: or}
+    '#': {R: or}
+    ' ': {R: reject}
+  accept:
+  reject:
